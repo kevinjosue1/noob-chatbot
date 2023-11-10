@@ -32,11 +32,12 @@ def check_all_messages(message):
             nonlocal highest_prob
             highest_prob[bot_response] = message_probability(message, list_of_words, single_response, required_words)
 
-        response('Hola', ['hola', 'klk', 'saludos', 'buenas'], single_response = True)
-        response('Estoy bien y tu?', ['como', 'estas', 'va', 'vas', 'sientes'], required_words=['como'])
-        response('Estamos ubicados en la calle 23 numero 123', ['ubicados', 'direccion', 'donde', 'ubicacion'], single_response=True)
-        response('Siempre a la orden', ['gracias', 'te lo agradezco', 'thanks'], single_response=True)
-
+        response('Hola Biemvenido a mi ChatBot', ['hola', 'saludos', 'buenas', 'dias', 'tardes', 'noches'], single_response = True)
+        response('bien gracias y usted', ['como', 'estas', 'va', 'vas', 'sientes'], required_words=['como'])
+        response('Vendemos computadoras, laptops y accesorios para computadoras', ['ofrecer', 'tienen', 'hay', 'que', 'venden', 'ofrecen'], single_response=True)
+        response('visite nuestra tienda en la Av. 5 de Junio y, C. 42 S-O-Oriente para mas informacion', ['ubicados', 'direccion', 'donde', 'ubicacion', 'tienda', 'productos', 'venden'], single_response=True)
+        response('Un placer poder ayudar', ['gracias', 'te lo agradezco', 'bueno', 'ok'], single_response=True)
+        response('Gracias vuelva pronto👋', ['adios', 'chao', 'luego', 'pronto'], single_response=True)
         best_match = max(highest_prob, key=highest_prob.get)
         #print(highest_prob)
 
